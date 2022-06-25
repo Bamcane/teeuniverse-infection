@@ -128,10 +128,10 @@ int main(int argc, char* argv[])
 		CAssetPath GizmoPath;
 		CAssetPath AssetPath;
 		
-		CREATE_SPRITE_PATH(GizmoPath, PackageId, "gizmoZombieSpawn", ImageEntitiesPath, 1, 3, 1, 1);
+		CREATE_SPRITE_PATH(GizmoPath, PackageId, "gizmoSpawnZombie", ImageEntitiesPath, 1, 3, 1, 1);
 		
 		CAsset_EntityType* pAsset = pKernel->AssetsManager()->NewAsset_Hard<CAsset_EntityType>(&AssetPath, PackageId);
-		pAsset->SetName("infZombieSpawn");
+		pAsset->SetName("infSpawnZombie");
 		pAsset->SetCollisionRadius(64.0f);
 		pAsset->SetGizmoPath(GizmoPath);
 	}
@@ -140,10 +140,10 @@ int main(int argc, char* argv[])
 		CAssetPath GizmoPath;
 		CAssetPath AssetPath;
 		
-		CREATE_SPRITE_PATH(GizmoPath, PackageId, "gizmoHumanSpawn", ImageEntitiesPath, 2, 3, 1, 1);
+		CREATE_SPRITE_PATH(GizmoPath, PackageId, "gizmoSpawnHuman", ImageEntitiesPath, 2, 3, 1, 1);
 		
 		CAsset_EntityType* pAsset = pKernel->AssetsManager()->NewAsset_Hard<CAsset_EntityType>(&AssetPath, PackageId);
-		pAsset->SetName("infHumanSpawn");
+		pAsset->SetName("infSpawnHuman");
 		pAsset->SetCollisionRadius(64.0f);
 		pAsset->SetGizmoPath(GizmoPath);
 	}
