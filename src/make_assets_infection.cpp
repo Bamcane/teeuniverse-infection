@@ -67,9 +67,9 @@ int main(int argc, char* argv[])
 		exit(EXIT_FAILURE);
 	}
 	
-	int PackageId = -1;
+	int PackageId = pKernel->AssetsManager()->NewPackage("infection");
 	
-	/* UNIV TEEWORLDS */
+	/* UNIV INFECTION */
 	PackageId = pKernel->AssetsManager()->NewPackage("infectionX");
 	pKernel->AssetsManager()->SetPackageAuthor(PackageId, "ErrorDreemurr");
 	pKernel->AssetsManager()->SetPackageCredits(PackageId, "TeeDream");
@@ -123,7 +123,7 @@ int main(int argc, char* argv[])
 		pAsset->SetIndexBorderColor(SubPath, vec4(149.0f/255.0f, 190.0f/255.0f, 222.0f/255.0f, 1.0f));
 		pAsset->SetIndexGroup(SubPath, GroupId_Physics);
 	}
-	//EntityType, Blue Spawn
+	//EntityType, Zombie Spawn
 	{
 		CAssetPath GizmoPath;
 		CAssetPath AssetPath;
@@ -135,7 +135,7 @@ int main(int argc, char* argv[])
 		pAsset->SetCollisionRadius(64.0f);
 		pAsset->SetGizmoPath(GizmoPath);
 	}
-	//EntityType, Red Spawn
+	//EntityType, Human Spawn
 	{
 		CAssetPath GizmoPath;
 		CAssetPath AssetPath;
